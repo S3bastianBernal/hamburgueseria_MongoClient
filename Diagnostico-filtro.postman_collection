@@ -1,0 +1,695 @@
+{
+	"info": {
+		"_postman_id": "d7898a17-99db-4602-bcfb-89250d7a0158",
+		"name": "Diagnostico-filtro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28089214",
+		"_collection_link": "https://restless-satellite-705657.postman.co/workspace/campus~9af3287f-2ec9-4e14-b510-038753553286/collection/28089214-d7898a17-99db-4602-bcfb-89250d7a0158?action=share&source=collection_link&creator=28089214"
+	},
+	"item": [
+		{
+			"name": "1. Ingredinetes con stock menor a 400",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/ingredientes/ejercicio1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ingredientes",
+						"ejercicio1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Hamburguesas Vegetarianas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/hamburguesas/veg/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"veg",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Chef especializados en carnes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/chefs/carnes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"chefs",
+						"carnes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. aumentar pecio de ingredientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ingredientes/subir/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ingredientes",
+						"subir",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. hamburguesas realizadas por chefB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/hamburguesas/ChefB/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ChefB",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. nombre y descripcion de las categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/categorias/all/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"categorias",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Eliminar ingredientes con stock 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/ingredientes/ejercicio7/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ingredientes",
+						"ejercicio7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. agregar nuevo ingrediente a haburguesa clasica",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/hamburguesas/newClasic/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"newClasic",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9.hamburguesas que contengan pan integral",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "10.Cambiar la especialidad del chefC a cocina internacional",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "11. Encontrar el ingrediente mas caro",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "12.hamburguesas que no contienen queso cheddar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio12/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio12",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "13.aumentar el stock del pan en 100 unidades",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "14.bucar los ingredientes con la palabra clasico en la descripcion",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "15.listar las hamburguesas cuyo precio sea menor o igual a 9",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "16.contar cuantos chefs existen en la base de datos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "17.buscar la descripcion la cual contenga la palabra gourmet",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "18.Eliminar las hamburguesas que tengan mas de 5 ingredientes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "19.Agregar un nuevo chef con especialidad en Cocina Asiatica",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "20.Ordenar las hamburguesas en orden ascendente",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "21.Encontrar las hamburguesas con un precio entre 2 y 5",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "22.Actualizar la descripción del “Pan” a “Pan fresco y crujiente”",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "23. encontrar hamburguesas con tomate y lechuga en sus ingredientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "24. Listar todos los chefs excepto “ChefA”",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/chefs/ejercicio24/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chefs",
+						"ejercicio24",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "25. Incrementar en $2 el precio de todas las hamburguesas de la categoría “Gourmet”",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio25/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio25",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "27. Encontrar la hamburguesa más cara",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio27/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio27",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "28. Agregar “Pepinillos” a todas las hamburguesas de la categoría “Clásica”",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio28/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio28",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "29. Eliminar todos los chefs que tienen una especialidad en “Cocina Vegetariana”",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/chefs/ejercicio29/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chefs",
+						"ejercicio29",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "30. Encontrar todas las hamburguesas que contienen exactamente 7 ingredientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio30/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio30",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "31. Encontrar la hamburguesa más cara que fue preparada por un chef especializado en “Gourmet”",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio31/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio31",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "32.Listar todos los ingredientes junto con el número de hamburguesas que los contienen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio32/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio32",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "33.Listar los chefs junto con el número de hamburguesas que han preparado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio33/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio33",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "34.Encuentra la categoría con la mayor cantidad de hamburguesas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio34/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio34",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "35.Listar todos los chefs y el costo total de ingredientes de todas las hamburguesas que han preparado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio35/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio35",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "36.Encontrar todos los ingredientes que no están en ninguna hamburguesa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio36/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio36",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "37.Listar todas las hamburguesas con su descripción de categoría",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio37/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio37",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "38.Encuentra el chef que ha preparado hamburguesas con el mayor número de ingredientes en total",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio38/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio38",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "39.Encontrar el precio promedio de las hamburguesas en cada categoría",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio39/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio39",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "40.Listar los chefs y la hamburguesa más cara que han preparado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hamburguesas/ejercicio40/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hamburguesas",
+						"ejercicio40",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
