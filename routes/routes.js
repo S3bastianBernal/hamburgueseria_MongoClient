@@ -21,7 +21,7 @@ const categoriaCollection = db.collection('categorias');
 router.get('/ejercicio1/', async(req, res) => {
     try {
         await client.connect();
-        const result = await ingredientesCollection.find({ stock: {$lt: 400}}).toArray();
+        const result = await ingredientesCollection.find({ stock: {$lt: 400}}).toArray(); // $lt funciona para establecer un limite en un dato
         res.send(result);
         client.close();
     } catch (error) {
@@ -57,7 +57,7 @@ router.get('/ejercicio3/', async(req, res) => {
 router.get('/ejercicio4/', async(req,res) =>{
     try {
         await client.connect();
-        const update = {$mul: {precio: 1.5}}
+        const update = {$mul: {precio: 1.5}} //$mul funciona para multiplicar un dato 
         const result = await ingredientesCollection.updateMany({},update);
         res.json(result);
         client.close();
@@ -111,7 +111,7 @@ router.get('/ejercicio7/', async(req,res) =>{
 router.get('/ejercicio8/', async(req,res) =>{
     try {
         await client.connect();
-        await hamburguesasCollection.updateOne({nombre: 'Clásica'}, {$push : {ingredientes: "chile"}})
+        await hamburguesasCollection.updateOne({nombre: 'Clásica'}, {$push : {ingredientes: "chile"}}) //$push sirve para agregar un dato
         const result = await hamburguesasCollection.find({nombre: "Clásica"}).toArray();
         res.json(result);
     } catch (error) {
@@ -137,7 +137,7 @@ router.get('/ejercicio9/', async(req,res) =>{
 router.get('/ejercicio10/', async(req,res) =>{
     try {
         await client.connect();
-        await chefsCollection.updateOne({nombre: "ChefC"}, {$set : {especialidad: "Cocina Internacional"}})
+        await chefsCollection.updateOne({nombre: "ChefC"}, {$set : {especialidad: "Cocina Internacional"}}) //$set nos ayuda a remplazar un dato por otro en especifico
         const result = await chefsCollection.find({especialidad: "Cocina Internacional"}).toArray();
         res.json(result);
     } catch (error) {
@@ -150,7 +150,7 @@ router.get('/ejercicio10/', async(req,res) =>{
 router.get('/ejercicio11/', async(req,res) =>{
     try {
         await client.connect();
-        const result = await ingredientesCollection.find().sort({precio: -1}).limit(1).toArray();
+        const result = await ingredientesCollection.find().sort({precio: -1}).limit(1).toArray(); //sort en este caso nos ayuda a ordenar el contenido ya sea de menor a mayor (1) o de mayor a menor (-1), limit nos ayuda a tener un numero especifico de contenido en el array final
         res.json(result);
         client.close();
     } catch (error) {
@@ -163,7 +163,7 @@ router.get('/ejercicio11/', async(req,res) =>{
 router.get('/ejercicio12/', async(req,res) =>{
     try {
         await client.connect();
-        const result = await hamburguesasCollection.find({ingredientes: {$ne : "Queso cheddar"}}).toArray();
+        const result = await hamburguesasCollection.find({ingredientes: {$ne : "Queso cheddar"}}).toArray(); // $ne sirve para decir al sistema que un dato no debe estar en nuestra consulta
         res.json(result);
         client.close();
     } catch (error) {
@@ -484,7 +484,7 @@ router.get('/ejercicio34/', async(req,res) =>{
 
 /* Endpoint 35: Listar todos los chefs y el costo total de ingredientes de todas las hamburguesas que han preparado */
 
-outer.get('/ejercicio35/', async (req, res) => {
+router.get('/ejercicio35/', async (req, res) => {
     try {
         await client.connect();
         const result = await hamburguesasCollection.aggregate([
@@ -509,8 +509,8 @@ outer.get('/ejercicio35/', async (req, res) => {
 router.get('/ejercicio36/', async (req, res) => {
     try {
         await client.connect();
-        const hamburguesas = await hamburguesasCollection.distinct('ingredientes');
-        const result = await ingredientesCollection.find({ nombre: { $nin: hamburguesas } }).toArray();
+        const hamburguesas = await db.collection('hamburguesas').distinct('ingredientes');
+        const result = await db.collection('ingredientes').find({ nombre: { $nin: hamburguesas } }).toArray();
         res.json(result);
         client.close();
     } catch (error) {
@@ -589,3 +589,5 @@ router.get('/ejercicio40/', async (req, res) => {
         console.log(error.message);
     }
 });
+
+module.exports = router;
